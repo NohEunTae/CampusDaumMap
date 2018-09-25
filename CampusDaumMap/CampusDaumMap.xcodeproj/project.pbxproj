@@ -13,7 +13,25 @@
 		CE9148CE215A033600076D7E /* CampusDaumMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9148CC215A033600076D7E /* CampusDaumMap.xcdatamodeld */; };
 		CE9148D0215A033900076D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9148CF215A033900076D7E /* Assets.xcassets */; };
 		CE9148D3215A033900076D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9148D1215A033900076D7E /* LaunchScreen.storyboard */; };
+		CE9148DE215A075D00076D7E /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9148DD215A075D00076D7E /* ApiGatewayMac.framework */; };
+		CE9148DF215A075D00076D7E /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE9148DD215A075D00076D7E /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE9148E3215A079200076D7E /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9148E2215A079200076D7E /* NMapViewerSDK.framework */; };
+		CE9148E7215A19FD00076D7E /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9148E6215A19FD00076D7E /* NMapViewResources.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE9148E0215A075D00076D7E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE9148DF215A075D00076D7E /* ApiGatewayMac.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE9148C2215A033600076D7E /* CampusDaumMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusDaumMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +42,10 @@
 		CE9148CF215A033900076D7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE9148D2215A033900076D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9148D4215A033900076D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9148DD215A075D00076D7E /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
+		CE9148E2215A079200076D7E /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = "../../maps.ios-master/Frameworks/NMapViewerSDK.framework"; sourceTree = "<group>"; };
+		CE9148E5215A0B3700076D7E /* CDObjHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDObjHeader.h; sourceTree = "<group>"; };
+		CE9148E6215A19FD00076D7E /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9148E3215A079200076D7E /* NMapViewerSDK.framework in Frameworks */,
+				CE9148DE215A075D00076D7E /* ApiGatewayMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +64,10 @@
 		CE9148B9215A033600076D7E = {
 			isa = PBXGroup;
 			children = (
+				CE9148DD215A075D00076D7E /* ApiGatewayMac.framework */,
 				CE9148C4215A033600076D7E /* CampusDaumMap */,
 				CE9148C3215A033600076D7E /* Products */,
+				CE9148E1215A079200076D7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,8 +113,18 @@
 			children = (
 				CE9148C5215A033600076D7E /* CDAppDelegate.swift */,
 				CE9148D4215A033900076D7E /* Info.plist */,
+				CE9148E5215A0B3700076D7E /* CDObjHeader.h */,
+				CE9148E6215A19FD00076D7E /* NMapViewResources.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		CE9148E1215A079200076D7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE9148E2215A079200076D7E /* NMapViewerSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +137,8 @@
 				CE9148BE215A033600076D7E /* Sources */,
 				CE9148BF215A033600076D7E /* Frameworks */,
 				CE9148C0215A033600076D7E /* Resources */,
+				CE9148E0215A075D00076D7E /* Embed Frameworks */,
+				CE9148E4215A088300076D7E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,11 +195,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CE9148E4215A088300076D7E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/user/Desktop/maps.ios-master/Scripts/strip-frameworks.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE9148BE215A033600076D7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9148E7215A19FD00076D7E /* NMapViewResources.swift in Sources */,
 				CE9148CE215A033600076D7E /* CampusDaumMap.xcdatamodeld in Sources */,
 				CE9148C8215A033600076D7E /* CDViewController.swift in Sources */,
 				CE9148C6215A033600076D7E /* CDAppDelegate.swift in Sources */,
@@ -310,13 +365,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32W5JEHP8L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/user/Desktop/maps.ios-master/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/CampusDaumMap/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = user.net.MiniBrowser.CampusDaumMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/user/Desktop/CampusDuamMap-NohEunTae/CampusDaumMap/CampusDaumMap/Support/CDObjHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -328,13 +393,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32W5JEHP8L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/user/Desktop/maps.ios-master/Frameworks",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/CampusDaumMap/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = user.net.MiniBrowser.CampusDaumMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/user/Desktop/CampusDuamMap-NohEunTae/CampusDaumMap/CampusDaumMap/Support/CDObjHeader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
