@@ -9,27 +9,48 @@
 import UIKit
 
 class CDBuildingDetailViewController: UIViewController {
+    
+    var building: Building?
+    var detailView: CDBuildingDetailView?
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = building?.bName
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let customView = Bundle.main.loadNibNamed("CDBuildingDetailView", owner: self, options: nil)?.first as? CDBuildingDetailView else {
+            return
+        }
+        detailView = customView
+        
+        self.detailView?.layerTableViewAdapter.layers = building?.layer?.array as? [Layers]
+        self.detailView?.layerTableViewAdapter.layers?.sort(by: { (now, next) -> Bool in
+            now.stairNumb > next.stairNumb
+        })
+        
+        for layer in self.detailView!.layerTableViewAdapter.layers! {
+            print(layer.stairNumb)
+        }
+        
+
+        let searchingCell = UINib(nibName: "CDBuildingDetailTableViewCell", bundle: nil)
+        detailView?.layerTableView.register(searchingCell, forCellReuseIdentifier: "buildingDetail")
+        detailView?.layerTableViewAdapter.delegate = self
+        
+        self.view.addSubview(self.detailView!)
+
+        
         // Do any additional setup after loading the view.
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension CDBuildingDetailViewController: CDBuildingDetailTableViewAdapterDelegate {
+    func tableCellDidClicked(layer: Layers) {
+        let layerDetailVC = CDLayerDetailViewController(nibName: "CDLayerDetailViewController", bundle: nil)
+        layerDetailVC.layer = layer
+        CDParentNavigationController.sharedInstance.pushViewController(layerDetailVC, animated: true)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

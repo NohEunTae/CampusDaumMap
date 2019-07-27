@@ -9,13 +9,15 @@
 import UIKit
 
 class CDBuildingDetailView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    @IBOutlet weak var layerTableView: UITableView!
+    var layerTableViewAdapter = CDBuildingDetailTableViewAdapter()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        layerTableView.delegate = self.layerTableViewAdapter
+        layerTableView.dataSource = self.layerTableViewAdapter
     }
-    */
-
+    
 }

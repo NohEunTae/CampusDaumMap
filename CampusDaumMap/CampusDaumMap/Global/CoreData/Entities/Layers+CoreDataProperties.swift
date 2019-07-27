@@ -20,7 +20,7 @@ extension Layers {
     @NSManaged public var imageName: String?
     @NSManaged public var stairNumb: Int32
     @NSManaged public var building: Building?
-    @NSManaged public var eachLayerFacilities: NSOrderedSet?
+    @NSManaged public var eachLayerFacilities: NSMutableOrderedSet?
 
 }
 

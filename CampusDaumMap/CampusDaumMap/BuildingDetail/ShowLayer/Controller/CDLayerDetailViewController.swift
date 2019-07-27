@@ -10,9 +10,23 @@ import UIKit
 
 class CDLayerDetailViewController: UIViewController {
 
+    var layerDetailView: CDLayerDetailView?
+    var layer: Layers?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if layer!.stairNumb == -1 {
+            self.title = "B\(layer!.stairNumb)F"
+        } else {
+            self.title = "\(layer!.stairNumb)F"
+        }
+        
+        guard let customView = Bundle.main.loadNibNamed("CDLayerDetailView", owner: self, options: nil)?.first as? CDLayerDetailView else {
+            return
+        }
+        layerDetailView = customView
+        layerDetailView?.layerImage.image = UIImage(named: layer!.imageName!)
+        self.view.addSubview(layerDetailView!)
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +34,6 @@ class CDLayerDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

@@ -1,13 +1,24 @@
 //
-//  EAGetUserLocation.h
-//  CampusDaumMap
+//  EAGetUserLoaction.h
+//  EasyToOrder
 //
-//  Created by user on 2018. 10. 5..
+//  Created by user on 2018. 5. 31..
 //  Copyright © 2018년 user. All rights reserved.
 //
 
-#ifndef EAGetUserLocation_h
-#define EAGetUserLocation_h
+#import <Foundation/Foundation.h>
 
+@class EALocationModel, CLLocation;
 
-#endif /* EAGetUserLocation_h */
+@protocol EAGetUserLocationProtocol
+
+- (void)getCurrentUserLocationWithCurrentLocation:(CLLocation *) location;
+
+@end
+
+@interface EAGetUserLocation : NSObject
+
+@property (nonatomic, strong) id<EAGetUserLocationProtocol> delegate;
+
+@end
+

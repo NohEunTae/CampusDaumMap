@@ -11,92 +11,79 @@ import CoreData
 
 // MARK: - Manage GPSInfo Core Data
 extension CDCoreDataManager {
-    @discardableResult func insertIntoGPSInfo(value: CDGPSInfoModel) -> Bool {
+    @discardableResult func insertIntoGPSInfo(latitude: Double, longitude: Double, bName: String?) -> Bool {
         let entityDescription = NSEntityDescription.entity(forEntityName: "GPSInfo", in: managedObjectContext)
         let contact = GPSInfo(entity: entityDescription!, insertInto: managedObjectContext)
-        contact.longitude = value.longitude
-        contact.latitude = value.latitude
-        contact.bName = value.bName
+        
+        guard selectGPS(latitude: latitude, longitude: longitude) == nil else {
+            print("[Error GPSInfo Insert Info] .... Data already exist")
+            return false
+        }
+        
+        contact.longitude = longitude
+        contact.latitude = latitude
+        let buidling = selectAllCoreDataObjectFromBuilding().filter { $0.bName == bName }.first
+        
+        contact.building = buidling
+        buidling?.gpsInfo?.add(contact)
+        
         return saveIfCanSave
     }
     
-    @discardableResult func selectAllObjectFromGPSInfo() -> NSArray {
-        let gpsInfos: NSMutableArray = NSMutableArray()
-        return executeGPSInfoQuery { (request) -> NSArray in
+    @discardableResult func selectAllCoreDataObjectFromGPSInfo() -> [GPSInfo] {
+        var gpsInfos = [GPSInfo]()
+        return executeGPSInfoQuery { (request) -> [GPSInfo] in
             do {
                 let objects = try managedObjectContext.fetch(request)
-                if objects.count > 0 {
-                    print("FindContact => Data founded!!")
-                    for object in objects {
-                        if let latitude = object.value(forKey: "latitude") as? Double,
-                            let longitude = object.value(forKey: "longitude") as? Double,
-                            let bName = object.value(forKey: "bName") as? String {
-                            
-                            let gpsInfo: CDGPSInfoModel = CDGPSInfoModel(latitude, longitude, bName)
-                            gpsInfos.add(gpsInfo)
-                        }
+                for object in objects {
+                    if object.latitude != 0, object.longitude != 0 {
+                        gpsInfos.append(object)
                     }
-                } else {
-                    print("FindContact => Nothing founded!!")
                 }
             } catch _ as NSError  {
-                print("findContact => managedObjectContext find function failed!!")
+                print("[Error GPSInfo Select All] .... ManagedObjectContext find function failed!!")
             }
+
             return gpsInfos
         }
     }
     
-    @discardableResult func updateGPSInfoSet(valueGPS: CDGPSInfoModel, where latitude: Double, _ longitude: Double) -> Bool {
-        return executeGPSInfoQuery(query: { (request) -> Bool in
-            do {
-                let objects = try managedObjectContext.fetch(request)
-                let match = objects.filter {$0.latitude == latitude && $0.longitude == longitude }.first
-                guard match != nil else {
-                    print("[info] .... can't find \(latitude) : \(longitude) gps")
-                    return false
-                }
-                
-                match?.setValue(valueGPS.bName, forKey: "bName")
-                if match?.latitude != valueGPS.latitude || match?.longitude != valueGPS.longitude {
-                    let isUpdateDataIsExist = objects.filter {$0.latitude == valueGPS.latitude && $0.longitude == valueGPS.longitude }.first
-                    
-                    guard isUpdateDataIsExist == nil else {
-                        print("[info] .... \(String(describing: valueGPS)) category is already exist")
-                        return false
-                    }
-                    match?.setValue(valueGPS.latitude, forKey: "latitude")
-                    match?.setValue(valueGPS.longitude, forKey: "longitude")
-                }
-                
-                try managedObjectContext.save()
-                print("[info] .... Save Successfully")
-            } catch _ as NSError  {
-                print("findContact => managedObjectContext find function failed!!")
-                return false
-            }
-            
-            return true
-        })
+    @discardableResult func selectGPS(latitude: Double, longitude: Double) -> GPSInfo? {
+        let gpsInfo = selectAllCoreDataObjectFromGPSInfo().filter { $0.latitude == latitude && $0.longitude == longitude }.first
         
+        return gpsInfo
     }
     
-    @discardableResult func deleteFromGPSInfoWhere(latitude: Double, longitude: Double) -> Bool {
-        return executeGPSInfoQuery(query: { (request) -> Bool in
-            do {
-                let objects = try managedObjectContext.fetch(request)
-                let match = objects.filter {$0.latitude == latitude && $0.longitude == longitude}.first
-                guard match != nil else {
-                    print("[info] .... \(latitude) : \(longitude) gps is not exist so delete failed")
-                    return false
-                }
-                managedObjectContext.delete(match!)
-                try managedObjectContext.save()
-                print("[info] .... Delete Successfully")
-                return true
-            } catch _ as NSError  {
-                print("findContact => managedObjectContext find function failed!!")
+    @discardableResult func updateGPSInfoSet(latitude: Double, longitude: Double, bName: String?, origin: GPSInfo) -> Bool {
+        let value = selectAllCoreDataObjectFromGPSInfo().filter { $0.latitude == latitude && $0.longitude == longitude }.first
+        
+        guard value == nil else {
+            print("[Error GPSInfo Update] .... Update GPS is already exist")
+            return false
+        }
+        
+        if bName != nil {
+            let building = selectAllCoreDataObjectFromBuilding().filter { $0.bName == bName }.first
+            guard let validBuilding = building else {
+                print("[Error GPSInfo Update] .... Update Building is not exist")
                 return false
             }
-        })
+            origin.building = validBuilding
+            validBuilding.gpsInfo?.add(origin)
+        }
+        
+        let originBuilding = selectAllCoreDataObjectFromBuilding().filter { $0 == origin.building }.first
+        originBuilding?.gpsInfo?.remove(origin)
+
+        origin.latitude = latitude
+        origin.longitude = longitude
+
+        
+        return saveIfCanSave
+    }
+    
+    @discardableResult func deleteFromGPSInfoWhere(gpsInfo: GPSInfo) -> Bool {
+        managedObjectContext.delete(gpsInfo)
+        return saveIfCanSave
     }
 }

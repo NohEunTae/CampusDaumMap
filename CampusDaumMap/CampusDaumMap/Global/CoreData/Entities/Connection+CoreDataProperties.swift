@@ -20,5 +20,4 @@ extension Connection {
     @NSManaged public var weight: Double
     @NSManaged public var nextGPS: GPSInfo?
     @NSManaged public var fromGPS: GPSInfo?
-
 }

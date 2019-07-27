@@ -18,8 +18,8 @@ extension Building {
 
     @NSManaged public var bName: String?
     @NSManaged public var bImage: String?
-    @NSManaged public var gpsInfo: NSOrderedSet?
-    @NSManaged public var layer: NSOrderedSet?
+    @NSManaged public var gpsInfo: NSMutableOrderedSet?
+    @NSManaged public var layer: NSMutableOrderedSet?
 
 }
 

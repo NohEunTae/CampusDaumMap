@@ -9,7 +9,8 @@
 import UIKit
 
 class CDBuildingsCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var buildingBlurImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

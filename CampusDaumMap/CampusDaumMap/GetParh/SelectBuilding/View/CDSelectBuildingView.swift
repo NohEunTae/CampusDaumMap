@@ -9,13 +9,22 @@
 import UIKit
 
 class CDSelectBuildingView: UIView {
+    @IBOutlet weak var buildingCollection: UICollectionView!
+    var buildingCollectionAdapter = CDBuildingsCollectionViewAdapter()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let layoutBuilding: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layoutBuilding.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        layoutBuilding.itemSize = CGSize(width: 105, height: 85)
+        layoutBuilding.scrollDirection = .vertical
+        layoutBuilding.minimumInteritemSpacing = 10
+        layoutBuilding.minimumLineSpacing = 20
+        buildingCollection!.collectionViewLayout = layoutBuilding
+        self.buildingCollection.dataSource = buildingCollectionAdapter
+        self.buildingCollection.delegate = buildingCollectionAdapter
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
     }
-    */
 
 }

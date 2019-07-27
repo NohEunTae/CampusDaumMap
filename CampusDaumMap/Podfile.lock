@@ -1,0 +1,20 @@
+PODS:
+  - Fingertips (0.5.0)
+  - lottie-ios (2.5.0)
+
+DEPENDENCIES:
+  - Fingertips
+  - lottie-ios
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Fingertips
+    - lottie-ios
+
+SPEC CHECKSUMS:
+  Fingertips: 8e557eed25253fcb4bfa25ac4418f8e8add1ad9a
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+
+PODFILE CHECKSUM: 406f12c8342863f6b8cddf500cf1f74c61bae2e4
+
+COCOAPODS: 1.5.3

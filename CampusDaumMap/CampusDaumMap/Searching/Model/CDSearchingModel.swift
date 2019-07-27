@@ -9,5 +9,11 @@
 import UIKit
 
 class CDSearchingModel: NSObject {
-
+    var name: String = String()
+    var imageName: String = String()
+    
+    init(name: String, imageName: String) {
+        self.name = name
+        self.imageName = imageName
+    }
 }

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Building" representedClassName=".Building" syncable="YES">
+        <attribute name="bImage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="bName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="gpsInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GPSInfo" inverseName="building" inverseEntity="GPSInfo" syncable="YES"/>
-        <relationship name="layer" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Layers" inverseName="building" inverseEntity="Layers" syncable="YES"/>
+        <relationship name="gpsInfo" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="GPSInfo" inverseName="building" inverseEntity="GPSInfo" syncable="YES"/>
+        <relationship name="layer" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Layers" inverseName="building" inverseEntity="Layers" syncable="YES"/>
     </entity>
     <entity name="Connection" representedClassName=".Connection" syncable="YES">
         <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="firstGPS" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="GPSInfo" syncable="YES"/>
+        <relationship name="fromGPS" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GPSInfo" inverseName="nextConnection" inverseEntity="GPSInfo" syncable="YES"/>
         <relationship name="nextGPS" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GPSInfo" syncable="YES"/>
     </entity>
     <entity name="EachLayerFacilities" representedClassName=".EachLayerFacilities" syncable="YES">
@@ -17,25 +18,26 @@
     <entity name="Facility" representedClassName=".Facility" syncable="YES">
         <attribute name="fName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="eachLayerFacilities" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="EachLayerFacilities" inverseName="facility" inverseEntity="EachLayerFacilities" syncable="YES"/>
+        <relationship name="eachLayerFacilities" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="EachLayerFacilities" inverseName="facility" inverseEntity="EachLayerFacilities" syncable="YES"/>
     </entity>
     <entity name="GPSInfo" representedClassName=".GPSInfo" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="building" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Building" inverseName="gpsInfo" inverseEntity="Building" syncable="YES"/>
+        <relationship name="nextConnection" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Connection" inverseName="fromGPS" inverseEntity="Connection" syncable="YES"/>
     </entity>
     <entity name="Layers" representedClassName=".Layers" syncable="YES">
         <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="stairNumb" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="stairNumb" optional="YES" attributeType="Integer 32" defaultValueString="-1" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="building" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Building" inverseName="layer" inverseEntity="Building" syncable="YES"/>
-        <relationship name="eachLayerFacilities" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="EachLayerFacilities" inverseName="layers" inverseEntity="EachLayerFacilities" syncable="YES"/>
+        <relationship name="eachLayerFacilities" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="EachLayerFacilities" inverseName="layers" inverseEntity="EachLayerFacilities" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Connection" positionX="-18" positionY="54" width="128" height="90"/>
-        <element name="GPSInfo" positionX="-45" positionY="0" width="128" height="90"/>
-        <element name="Building" positionX="9" positionY="90" width="128" height="90"/>
-        <element name="Layers" positionX="27" positionY="99" width="128" height="105"/>
-        <element name="Facility" positionX="45" positionY="108" width="128" height="90"/>
-        <element name="EachLayerFacilities" positionX="0" positionY="54" width="128" height="75"/>
+        <element name="Building" positionX="-333" positionY="261" width="128" height="105"/>
+        <element name="Connection" positionX="-117" positionY="-0" width="128" height="88"/>
+        <element name="EachLayerFacilities" positionX="-27" positionY="-156" width="128" height="75"/>
+        <element name="Facility" positionX="216" positionY="-18" width="128" height="88"/>
+        <element name="GPSInfo" positionX="-324" positionY="-144" width="128" height="103"/>
+        <element name="Layers" positionX="61" positionY="261" width="128" height="103"/>
     </elements>
 </model>

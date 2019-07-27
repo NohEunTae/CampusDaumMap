@@ -15,6 +15,24 @@ class NMapViewResources: NSObject {
     
     open static func imageWithType(_ poiFlagType: NMapPOIflagType, selected: Bool) -> UIImage? {
         switch poiFlagType {
+        case NMapPOIflagTypeDisabledToilet:
+            return #imageLiteral(resourceName: "f_icon_disabledPublicToilet")
+        case NMapPOIflagTypeBell:
+            return #imageLiteral(resourceName: "f_icon_bell")
+        case NMapPOIflagTypeSlope:
+            return #imageLiteral(resourceName: "f_icon_slopeWay")
+        case NMapPOIflagTypeWheelChairReport:
+            return #imageLiteral(resourceName: "f_icon_wheelchairReport")
+        case NMapPOIflagTypeDisabledRest:
+            return #imageLiteral(resourceName: "f_icon_disabledRest")
+        case NMapPOIflagTypeRest:
+            return #imageLiteral(resourceName: "f_icon_rest")
+        case NMapPOIflagTypeElevator:
+            return #imageLiteral(resourceName: "f_icon_elevator")
+        case NMapPOIflagTypePublicToilet:
+            return #imageLiteral(resourceName: "f_icon_publicToilet")
+        case NMapPOIflagTypeBuilding:
+            return #imageLiteral(resourceName: "f_icon_building")
         case NMapPOIflagTypeLocation:
             return #imageLiteral(resourceName: "pubtrans_ic_mylocation_on")
         case NMapPOIflagTypeLocationOff:

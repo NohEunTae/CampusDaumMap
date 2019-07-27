@@ -8,28 +8,54 @@
 
 import UIKit
 
+protocol CDSelectBuildingViewControllerDelegate {
+    func startPoint(bName: String)
+    func arrivedPoint(bName: String)
+}
+
 class CDSelectBuildingViewController: UIViewController {
 
+    var selectBuildingView: CDSelectBuildingView?
+    var isStartPoint = false
+    var delegate: CDSelectBuildingViewControllerDelegate?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+        if isStartPoint {
+            self.title = "출발지 선택"
+        } else {
+            self.title = "도착지 선택"
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let customView = Bundle.main.loadNibNamed("CDSelectBuildingView", owner: self, options: nil)?.first as? CDSelectBuildingView else {
+            return
+        }
+        
+        selectBuildingView = customView
+        selectBuildingView?.buildingCollectionAdapter.delegate = self
+        
+        let buildingCell = UINib(nibName: "CDBuildingsCollectionViewCell", bundle: nil)
+        selectBuildingView?.buildingCollection.register(buildingCell, forCellWithReuseIdentifier: "building")
 
+        self.view.addSubview(selectBuildingView!)
+        
+        
         // Do any additional setup after loading the view.
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension CDSelectBuildingViewController: CDBuildingsCollectionViewAdapterDelegate {
+    func buildingCellClicked(bName: String) {
+        if isStartPoint {
+            self.delegate?.startPoint(bName: bName)
+        } else {
+            self.delegate?.arrivedPoint(bName: bName)
+        }
+        CDParentNavigationController.sharedInstance.popViewController(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

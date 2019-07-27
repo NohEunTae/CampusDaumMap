@@ -1,0 +1,6 @@
+use_frameworks!
+
+target ‘CampusDaumMap’ do
+	pod 'lottie-ios'
+	pod 'Fingertips'
+end

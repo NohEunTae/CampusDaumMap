@@ -8,15 +8,29 @@
 
 import UIKit
 import CoreData
+import Fingertips
 
 @UIApplicationMain
 class CDAppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
+    var window: MBFingerTipWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = MBFingerTipWindow(frame: UIScreen.main.bounds)
+        self.window?.alwaysShowTouches = true
+        
+        window?.makeKeyAndVisible()
+
+        let waitingVC = CDWaitingViewController(nibName: "CDWaitingViewController", bundle: nil)
+        window?.rootViewController = waitingVC
+        let parentNavi = CDParentNavigationController.sharedInstance
+        parentNavi.navigationBar.isTranslucent = false
+        parentNavi.navigationBar.shadowImage = UIImage()
+        parentNavi.navigationBar.backIndicatorImage = UIImage()
+        parentNavi.navigationBar.barTintColor = .white
+        parentNavi.navigationBar.tintColor = gray
+
+        
         return true
     }
 
@@ -91,3 +105,15 @@ class CDAppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+let blue = UIColor.colorFromRGB(0x2B89FE)
+let gray = UIColor.colorFromRGB(0xD6D8E0)
+extension UIColor {
+    class func colorFromRGB(_ rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+}

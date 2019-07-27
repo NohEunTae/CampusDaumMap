@@ -19,7 +19,7 @@ extension Facility {
 
     @NSManaged public var fName: String?
     @NSManaged public var iconName: String?
-    @NSManaged public var eachLayerFacilities: NSOrderedSet?
+    @NSManaged public var eachLayerFacilities: NSMutableOrderedSet?
 
 }
 

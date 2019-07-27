@@ -7,8 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EDCFB1F612B1FA740344219 /* Pods_CampusDaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5861E8FB6BE8ECD927874C /* Pods_CampusDaumMap.framework */; };
+		CE0EA0252166854B00230873 /* CDSearchingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA0242166854B00230873 /* CDSearchingModel.swift */; };
+		CE0EA02A2166A5D500230873 /* CDBuildingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA0282166A5D500230873 /* CDBuildingDetailViewController.swift */; };
+		CE0EA02B2166A5D500230873 /* CDBuildingDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA0292166A5D500230873 /* CDBuildingDetailViewController.xib */; };
+		CE0EA02E2166A72100230873 /* CDBuildingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA02D2166A72100230873 /* CDBuildingDetailView.swift */; };
+		CE0EA0302166A72B00230873 /* CDBuildingDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA02F2166A72B00230873 /* CDBuildingDetailView.xib */; };
+		CE0EA0342166A8D900230873 /* CDBuildingDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA0322166A8D900230873 /* CDBuildingDetailTableViewCell.swift */; };
+		CE0EA0352166A8D900230873 /* CDBuildingDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA0332166A8D900230873 /* CDBuildingDetailTableViewCell.xib */; };
+		CE0EA0382166AAE000230873 /* CDBuildingDetailTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA0372166AAE000230873 /* CDBuildingDetailTableViewAdapter.swift */; };
+		CE0EA03E2166B3AB00230873 /* CDLayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA03C2166B3AB00230873 /* CDLayerDetailViewController.swift */; };
+		CE0EA03F2166B3AB00230873 /* CDLayerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA03D2166B3AB00230873 /* CDLayerDetailViewController.xib */; };
+		CE0EA0412166B3C600230873 /* CDLayerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA0402166B3C600230873 /* CDLayerDetailView.swift */; };
+		CE0EA0432166B3D200230873 /* CDLayerDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA0422166B3D200230873 /* CDLayerDetailView.xib */; };
+		CE0EA0512166BB6200230873 /* CDGetPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA04F2166BB6200230873 /* CDGetPathViewController.swift */; };
+		CE0EA0522166BB6200230873 /* CDGetPathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA0502166BB6200230873 /* CDGetPathViewController.xib */; };
+		CE0EA0542166BB7100230873 /* CDGetPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA0532166BB7100230873 /* CDGetPathView.swift */; };
+		CE0EA0562166BB7800230873 /* CDGetPathView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA0552166BB7800230873 /* CDGetPathView.xib */; };
+		CE0EA05C2166D56D00230873 /* EAGetUserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA05B2166D56D00230873 /* EAGetUserLocation.m */; };
+		CE0EA0612167003C00230873 /* CDGetShortestPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA0602167003C00230873 /* CDGetShortestPath.swift */; };
+		CE0EA06821671AFC00230873 /* CDSelectBuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA06621671AFC00230873 /* CDSelectBuildingViewController.swift */; };
+		CE0EA06921671AFC00230873 /* CDSelectBuildingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA06721671AFC00230873 /* CDSelectBuildingViewController.xib */; };
+		CE0EA06C21671B0C00230873 /* CDSelectBuildingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA06B21671B0C00230873 /* CDSelectBuildingView.swift */; };
+		CE0EA06E21671B1400230873 /* CDSelectBuildingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA06D21671B1400230873 /* CDSelectBuildingView.xib */; };
+		CE0EA0752167405800230873 /* CDWaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0EA0732167405800230873 /* CDWaitingViewController.swift */; };
+		CE0EA0762167405800230873 /* CDWaitingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0EA0742167405800230873 /* CDWaitingViewController.xib */; };
+		CE587A4321651FB20094E290 /* CDParentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE587A4221651FB20094E290 /* CDParentNavigationController.swift */; };
+		CE587A492165203F0094E290 /* CDWaitingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE587A482165203F0094E290 /* CDWaitingView.xib */; };
+		CE587A4B216520540094E290 /* CDWaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE587A4A216520540094E290 /* CDWaitingView.swift */; };
+		CE587A4E216521800094E290 /* loading_circle.json in Resources */ = {isa = PBXBuildFile; fileRef = CE587A4D216521800094E290 /* loading_circle.json */; };
+		CE587A50216525840094E290 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CE587A4F216525840094E290 /* loading.json */; };
+		CE587A5421652B2B0094E290 /* CDMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE587A5321652B2B0094E290 /* CDMainViewController.xib */; };
+		CE6246FD216679F80081138E /* CDSearchTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6246FC216679F80081138E /* CDSearchTableViewAdapter.swift */; };
+		CE62470121667A230081138E /* CDSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6246FF21667A230081138E /* CDSearchTableViewCell.swift */; };
+		CE62470221667A230081138E /* CDSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE62470021667A230081138E /* CDSearchTableViewCell.xib */; };
+		CE62470521667C8A0081138E /* CDSearching+SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62470421667C8A0081138E /* CDSearching+SearchDelegate.swift */; };
+		CE8197222165BDA300522C58 /* CDSearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8197202165BDA300522C58 /* CDSearchingViewController.swift */; };
+		CE8197232165BDA300522C58 /* CDSearchingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8197212165BDA300522C58 /* CDSearchingViewController.xib */; };
+		CE8197252165BDAD00522C58 /* CDSearchingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8197242165BDAD00522C58 /* CDSearchingView.xib */; };
+		CE8197272165BDBC00522C58 /* CDSearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8197262165BDBC00522C58 /* CDSearchingView.swift */; };
+		CE81972C2165CF5400522C58 /* CDFacilityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81972A2165CF5400522C58 /* CDFacilityCollectionViewCell.swift */; };
+		CE81972D2165CF5500522C58 /* CDFacilityCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE81972B2165CF5400522C58 /* CDFacilityCollectionViewCell.xib */; };
+		CE8197302165D08300522C58 /* CDFacilityCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81972F2165D08300522C58 /* CDFacilityCollectionViewAdapter.swift */; };
+		CE819733216649AE00522C58 /* CDBuildingCollectionAdpater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE819732216649AE00522C58 /* CDBuildingCollectionAdpater.swift */; };
+		CE81973621665B9200522C58 /* Building+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81973421665B9200522C58 /* Building+CoreDataClass.swift */; };
+		CE81973721665B9200522C58 /* Building+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81973521665B9200522C58 /* Building+CoreDataProperties.swift */; };
+		CE81973C2166667700522C58 /* CDBuildingsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81973A2166667700522C58 /* CDBuildingsCollectionViewCell.swift */; };
+		CE81973D2166667700522C58 /* CDBuildingsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE81973B2166667700522C58 /* CDBuildingsCollectionViewCell.xib */; };
+		CE81973F216667F100522C58 /* CDBuildingsCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81973E216667F100522C58 /* CDBuildingsCollectionViewAdapter.swift */; };
 		CE9148C6215A033600076D7E /* CDAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9148C5215A033600076D7E /* CDAppDelegate.swift */; };
-		CE9148C8215A033600076D7E /* CDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9148C7215A033600076D7E /* CDViewController.swift */; };
+		CE9148C8215A033600076D7E /* CDMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9148C7215A033600076D7E /* CDMainViewController.swift */; };
 		CE9148CB215A033600076D7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9148C9215A033600076D7E /* Main.storyboard */; };
 		CE9148CE215A033600076D7E /* CampusDaumMap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9148CC215A033600076D7E /* CampusDaumMap.xcdatamodeld */; };
 		CE9148D0215A033900076D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9148CF215A033900076D7E /* Assets.xcassets */; };
@@ -17,6 +65,26 @@
 		CE9148DF215A075D00076D7E /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE9148DD215A075D00076D7E /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE9148E3215A079200076D7E /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9148E2215A079200076D7E /* NMapViewerSDK.framework */; };
 		CE9148E7215A19FD00076D7E /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9148E6215A19FD00076D7E /* NMapViewResources.swift */; };
+		CE9148EC215A372100076D7E /* CDMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9148EB215A372100076D7E /* CDMainView.swift */; };
+		CE9148EE215A372E00076D7E /* CDMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9148ED215A372E00076D7E /* CDMainView.xib */; };
+		CE914915215A485300076D7E /* CDCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE914914215A485300076D7E /* CDCoreDataManager.swift */; };
+		CE91491C215A87B700076D7E /* CDSetInitialCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91491B215A87B700076D7E /* CDSetInitialCoreData.swift */; };
+		CE914942215B802800076D7E /* CDGPSInfoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE914941215B802800076D7E /* CDGPSInfoExtension.swift */; };
+		CE914944215B806900076D7E /* CDConnectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE914943215B806900076D7E /* CDConnectionExtension.swift */; };
+		CE914946215B808E00076D7E /* CDBuildingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE914945215B808E00076D7E /* CDBuildingExtension.swift */; };
+		CE91498D215C6E0F00076D7E /* EachLayerFacilities+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE914981215C6E0F00076D7E /* EachLayerFacilities+CoreDataClass.swift */; };
+		CE91498E215C6E0F00076D7E /* EachLayerFacilities+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE914982215C6E0F00076D7E /* EachLayerFacilities+CoreDataProperties.swift */; };
+		CE91499E215D2CE300076D7E /* CDLayersExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91499D215D2CE300076D7E /* CDLayersExtension.swift */; };
+		CEC737F3215E21BD00DA7C36 /* GPSInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737EF215E21BD00DA7C36 /* GPSInfo+CoreDataClass.swift */; };
+		CEC737F4215E21BD00DA7C36 /* GPSInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737F0215E21BD00DA7C36 /* GPSInfo+CoreDataProperties.swift */; };
+		CEC737F5215E21BD00DA7C36 /* Connection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737F1215E21BD00DA7C36 /* Connection+CoreDataClass.swift */; };
+		CEC737F6215E21BD00DA7C36 /* Connection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737F2215E21BD00DA7C36 /* Connection+CoreDataProperties.swift */; };
+		CEC737F8215E276D00DA7C36 /* CDFacilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737F7215E276D00DA7C36 /* CDFacilityExtension.swift */; };
+		CEC737FB215E2AC700DA7C36 /* CDEachLayerFacilitiesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737FA215E2AC700DA7C36 /* CDEachLayerFacilitiesExtension.swift */; };
+		CEC73800215E367F00DA7C36 /* Facility+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737FC215E367F00DA7C36 /* Facility+CoreDataClass.swift */; };
+		CEC73801215E367F00DA7C36 /* Facility+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737FD215E367F00DA7C36 /* Facility+CoreDataProperties.swift */; };
+		CEC73802215E367F00DA7C36 /* Layers+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737FE215E367F00DA7C36 /* Layers+CoreDataClass.swift */; };
+		CEC73803215E367F00DA7C36 /* Layers+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC737FF215E367F00DA7C36 /* Layers+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,9 +102,59 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C50339F3856038F86024A9A7 /* Pods-CampusDaumMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusDaumMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CampusDaumMap/Pods-CampusDaumMap.debug.xcconfig"; sourceTree = "<group>"; };
+		C58481E54430F415940C177C /* Pods-CampusDaumMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampusDaumMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-CampusDaumMap/Pods-CampusDaumMap.release.xcconfig"; sourceTree = "<group>"; };
+		CE0EA0242166854B00230873 /* CDSearchingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSearchingModel.swift; sourceTree = "<group>"; };
+		CE0EA0282166A5D500230873 /* CDBuildingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBuildingDetailViewController.swift; sourceTree = "<group>"; };
+		CE0EA0292166A5D500230873 /* CDBuildingDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDBuildingDetailViewController.xib; sourceTree = "<group>"; };
+		CE0EA02D2166A72100230873 /* CDBuildingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBuildingDetailView.swift; sourceTree = "<group>"; };
+		CE0EA02F2166A72B00230873 /* CDBuildingDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDBuildingDetailView.xib; sourceTree = "<group>"; };
+		CE0EA0322166A8D900230873 /* CDBuildingDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBuildingDetailTableViewCell.swift; sourceTree = "<group>"; };
+		CE0EA0332166A8D900230873 /* CDBuildingDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDBuildingDetailTableViewCell.xib; sourceTree = "<group>"; };
+		CE0EA0372166AAE000230873 /* CDBuildingDetailTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBuildingDetailTableViewAdapter.swift; sourceTree = "<group>"; };
+		CE0EA03C2166B3AB00230873 /* CDLayerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDLayerDetailViewController.swift; sourceTree = "<group>"; };
+		CE0EA03D2166B3AB00230873 /* CDLayerDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDLayerDetailViewController.xib; sourceTree = "<group>"; };
+		CE0EA0402166B3C600230873 /* CDLayerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDLayerDetailView.swift; sourceTree = "<group>"; };
+		CE0EA0422166B3D200230873 /* CDLayerDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDLayerDetailView.xib; sourceTree = "<group>"; };
+		CE0EA04F2166BB6200230873 /* CDGetPathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDGetPathViewController.swift; sourceTree = "<group>"; };
+		CE0EA0502166BB6200230873 /* CDGetPathViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDGetPathViewController.xib; sourceTree = "<group>"; };
+		CE0EA0532166BB7100230873 /* CDGetPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDGetPathView.swift; sourceTree = "<group>"; };
+		CE0EA0552166BB7800230873 /* CDGetPathView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDGetPathView.xib; sourceTree = "<group>"; };
+		CE0EA05B2166D56D00230873 /* EAGetUserLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAGetUserLocation.m; sourceTree = "<group>"; };
+		CE0EA05D2166D58000230873 /* EAGetUserLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAGetUserLocation.h; sourceTree = "<group>"; };
+		CE0EA0602167003C00230873 /* CDGetShortestPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDGetShortestPath.swift; sourceTree = "<group>"; };
+		CE0EA06621671AFC00230873 /* CDSelectBuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSelectBuildingViewController.swift; sourceTree = "<group>"; };
+		CE0EA06721671AFC00230873 /* CDSelectBuildingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDSelectBuildingViewController.xib; sourceTree = "<group>"; };
+		CE0EA06B21671B0C00230873 /* CDSelectBuildingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSelectBuildingView.swift; sourceTree = "<group>"; };
+		CE0EA06D21671B1400230873 /* CDSelectBuildingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDSelectBuildingView.xib; sourceTree = "<group>"; };
+		CE0EA0732167405800230873 /* CDWaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDWaitingViewController.swift; sourceTree = "<group>"; };
+		CE0EA0742167405800230873 /* CDWaitingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDWaitingViewController.xib; sourceTree = "<group>"; };
+		CE587A4221651FB20094E290 /* CDParentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDParentNavigationController.swift; sourceTree = "<group>"; };
+		CE587A482165203F0094E290 /* CDWaitingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDWaitingView.xib; sourceTree = "<group>"; };
+		CE587A4A216520540094E290 /* CDWaitingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDWaitingView.swift; sourceTree = "<group>"; };
+		CE587A4D216521800094E290 /* loading_circle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_circle.json; sourceTree = "<group>"; };
+		CE587A4F216525840094E290 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		CE587A5321652B2B0094E290 /* CDMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDMainViewController.xib; sourceTree = "<group>"; };
+		CE6246FC216679F80081138E /* CDSearchTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSearchTableViewAdapter.swift; sourceTree = "<group>"; };
+		CE6246FF21667A230081138E /* CDSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSearchTableViewCell.swift; sourceTree = "<group>"; };
+		CE62470021667A230081138E /* CDSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDSearchTableViewCell.xib; sourceTree = "<group>"; };
+		CE62470421667C8A0081138E /* CDSearching+SearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDSearching+SearchDelegate.swift"; sourceTree = "<group>"; };
+		CE8197202165BDA300522C58 /* CDSearchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSearchingViewController.swift; sourceTree = "<group>"; };
+		CE8197212165BDA300522C58 /* CDSearchingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDSearchingViewController.xib; sourceTree = "<group>"; };
+		CE8197242165BDAD00522C58 /* CDSearchingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDSearchingView.xib; sourceTree = "<group>"; };
+		CE8197262165BDBC00522C58 /* CDSearchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSearchingView.swift; sourceTree = "<group>"; };
+		CE81972A2165CF5400522C58 /* CDFacilityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFacilityCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE81972B2165CF5400522C58 /* CDFacilityCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDFacilityCollectionViewCell.xib; sourceTree = "<group>"; };
+		CE81972F2165D08300522C58 /* CDFacilityCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFacilityCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		CE819732216649AE00522C58 /* CDBuildingCollectionAdpater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBuildingCollectionAdpater.swift; sourceTree = "<group>"; };
+		CE81973421665B9200522C58 /* Building+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Building+CoreDataClass.swift"; path = "/Users/user/Desktop/CampusDuamMap-NohEunTae/CampusDaumMap/CampusDaumMap/Global/CoreData/Entities/Building+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		CE81973521665B9200522C58 /* Building+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Building+CoreDataProperties.swift"; path = "/Users/user/Desktop/CampusDuamMap-NohEunTae/CampusDaumMap/CampusDaumMap/Global/CoreData/Entities/Building+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		CE81973A2166667700522C58 /* CDBuildingsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBuildingsCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE81973B2166667700522C58 /* CDBuildingsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDBuildingsCollectionViewCell.xib; sourceTree = "<group>"; };
+		CE81973E216667F100522C58 /* CDBuildingsCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBuildingsCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		CE9148C2215A033600076D7E /* CampusDaumMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampusDaumMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9148C5215A033600076D7E /* CDAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDAppDelegate.swift; sourceTree = "<group>"; };
-		CE9148C7215A033600076D7E /* CDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDViewController.swift; sourceTree = "<group>"; };
+		CE9148C7215A033600076D7E /* CDMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMainViewController.swift; sourceTree = "<group>"; };
 		CE9148CA215A033600076D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE9148CD215A033600076D7E /* CampusDaumMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CampusDaumMap.xcdatamodel; sourceTree = "<group>"; };
 		CE9148CF215A033900076D7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +164,27 @@
 		CE9148E2215A079200076D7E /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = "../../maps.ios-master/Frameworks/NMapViewerSDK.framework"; sourceTree = "<group>"; };
 		CE9148E5215A0B3700076D7E /* CDObjHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDObjHeader.h; sourceTree = "<group>"; };
 		CE9148E6215A19FD00076D7E /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
+		CE9148EB215A372100076D7E /* CDMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMainView.swift; sourceTree = "<group>"; };
+		CE9148ED215A372E00076D7E /* CDMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CDMainView.xib; sourceTree = "<group>"; };
+		CE914914215A485300076D7E /* CDCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDCoreDataManager.swift; sourceTree = "<group>"; };
+		CE91491B215A87B700076D7E /* CDSetInitialCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDSetInitialCoreData.swift; sourceTree = "<group>"; };
+		CE914941215B802800076D7E /* CDGPSInfoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDGPSInfoExtension.swift; sourceTree = "<group>"; };
+		CE914943215B806900076D7E /* CDConnectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDConnectionExtension.swift; sourceTree = "<group>"; };
+		CE914945215B808E00076D7E /* CDBuildingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDBuildingExtension.swift; sourceTree = "<group>"; };
+		CE914981215C6E0F00076D7E /* EachLayerFacilities+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EachLayerFacilities+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CE914982215C6E0F00076D7E /* EachLayerFacilities+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EachLayerFacilities+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE91499D215D2CE300076D7E /* CDLayersExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDLayersExtension.swift; sourceTree = "<group>"; };
+		CEC737EF215E21BD00DA7C36 /* GPSInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GPSInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CEC737F0215E21BD00DA7C36 /* GPSInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GPSInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CEC737F1215E21BD00DA7C36 /* Connection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Connection+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CEC737F2215E21BD00DA7C36 /* Connection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Connection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CEC737F7215E276D00DA7C36 /* CDFacilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDFacilityExtension.swift; sourceTree = "<group>"; };
+		CEC737FA215E2AC700DA7C36 /* CDEachLayerFacilitiesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEachLayerFacilitiesExtension.swift; sourceTree = "<group>"; };
+		CEC737FC215E367F00DA7C36 /* Facility+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Facility+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CEC737FD215E367F00DA7C36 /* Facility+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Facility+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CEC737FE215E367F00DA7C36 /* Layers+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layers+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CEC737FF215E367F00DA7C36 /* Layers+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layers+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CF5861E8FB6BE8ECD927874C /* Pods_CampusDaumMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampusDaumMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +194,324 @@
 			files = (
 				CE9148E3215A079200076D7E /* NMapViewerSDK.framework in Frameworks */,
 				CE9148DE215A075D00076D7E /* ApiGatewayMac.framework in Frameworks */,
+				2EDCFB1F612B1FA740344219 /* Pods_CampusDaumMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B70CA1D4A60C806F1E8DC257 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C50339F3856038F86024A9A7 /* Pods-CampusDaumMap.debug.xcconfig */,
+				C58481E54430F415940C177C /* Pods-CampusDaumMap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE0EA0232166853500230873 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0242166854B00230873 /* CDSearchingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0EA0262166A4C700230873 /* BuildingDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0392166B36600230873 /* ShowLayer */,
+				CE0EA0362166AACA00230873 /* Adapter */,
+				CE0EA02C2166A70600230873 /* View */,
+				CE0EA0272166A4E200230873 /* Controller */,
+			);
+			path = BuildingDetail;
+			sourceTree = "<group>";
+		};
+		CE0EA0272166A4E200230873 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0282166A5D500230873 /* CDBuildingDetailViewController.swift */,
+				CE0EA0292166A5D500230873 /* CDBuildingDetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE0EA02C2166A70600230873 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0312166A8BB00230873 /* Cell */,
+				CE0EA02D2166A72100230873 /* CDBuildingDetailView.swift */,
+				CE0EA02F2166A72B00230873 /* CDBuildingDetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE0EA0312166A8BB00230873 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0322166A8D900230873 /* CDBuildingDetailTableViewCell.swift */,
+				CE0EA0332166A8D900230873 /* CDBuildingDetailTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CE0EA0362166AACA00230873 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0372166AAE000230873 /* CDBuildingDetailTableViewAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		CE0EA0392166B36600230873 /* ShowLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA03B2166B37600230873 /* View */,
+				CE0EA03A2166B37100230873 /* Controller */,
+			);
+			path = ShowLayer;
+			sourceTree = "<group>";
+		};
+		CE0EA03A2166B37100230873 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA03C2166B3AB00230873 /* CDLayerDetailViewController.swift */,
+				CE0EA03D2166B3AB00230873 /* CDLayerDetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE0EA03B2166B37600230873 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0402166B3C600230873 /* CDLayerDetailView.swift */,
+				CE0EA0422166B3D200230873 /* CDLayerDetailView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE0EA0442166BAE600230873 /* GetParh */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA06221671AB600230873 /* SelectBuilding */,
+				CE0EA05F2167001300230873 /* Model */,
+				CE0EA0462166BAFD00230873 /* View */,
+				CE0EA0452166BAF800230873 /* Controller */,
+			);
+			path = GetParh;
+			sourceTree = "<group>";
+		};
+		CE0EA0452166BAF800230873 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA04F2166BB6200230873 /* CDGetPathViewController.swift */,
+				CE0EA0502166BB6200230873 /* CDGetPathViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE0EA0462166BAFD00230873 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0532166BB7100230873 /* CDGetPathView.swift */,
+				CE0EA0552166BB7800230873 /* CDGetPathView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE0EA0572166D50600230873 /* EAGetuserLoaction */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA05B2166D56D00230873 /* EAGetUserLocation.m */,
+				CE0EA05D2166D58000230873 /* EAGetUserLocation.h */,
+			);
+			path = EAGetuserLoaction;
+			sourceTree = "<group>";
+		};
+		CE0EA05F2167001300230873 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0602167003C00230873 /* CDGetShortestPath.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE0EA06221671AB600230873 /* SelectBuilding */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA06421671AC800230873 /* View */,
+				CE0EA06321671AC300230873 /* Controller */,
+			);
+			path = SelectBuilding;
+			sourceTree = "<group>";
+		};
+		CE0EA06321671AC300230873 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA06621671AFC00230873 /* CDSelectBuildingViewController.swift */,
+				CE0EA06721671AFC00230873 /* CDSelectBuildingViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE0EA06421671AC800230873 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA06B21671B0C00230873 /* CDSelectBuildingView.swift */,
+				CE0EA06D21671B1400230873 /* CDSelectBuildingView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE587A3E21651E970094E290 /* Waiting */ = {
+			isa = PBXGroup;
+			children = (
+				CE587A4021651F5F0094E290 /* View */,
+				CE587A3F21651F520094E290 /* Controller */,
+			);
+			path = Waiting;
+			sourceTree = "<group>";
+		};
+		CE587A3F21651F520094E290 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0732167405800230873 /* CDWaitingViewController.swift */,
+				CE0EA0742167405800230873 /* CDWaitingViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE587A4021651F5F0094E290 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE587A482165203F0094E290 /* CDWaitingView.xib */,
+				CE587A4A216520540094E290 /* CDWaitingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE587A4121651F820094E290 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				CE587A4221651FB20094E290 /* CDParentNavigationController.swift */,
+			);
+			path = Parent;
+			sourceTree = "<group>";
+		};
+		CE587A4C216521610094E290 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				CE587A4F216525840094E290 /* loading.json */,
+				CE587A4D216521800094E290 /* loading_circle.json */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		CE6246FE21667A020081138E /* SearchTable */ = {
+			isa = PBXGroup;
+			children = (
+				CE6246FF21667A230081138E /* CDSearchTableViewCell.swift */,
+				CE62470021667A230081138E /* CDSearchTableViewCell.xib */,
+			);
+			path = SearchTable;
+			sourceTree = "<group>";
+		};
+		CE62470321667C550081138E /* CDSearching+SearchDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CE62470421667C8A0081138E /* CDSearching+SearchDelegate.swift */,
+			);
+			path = "CDSearching+SearchDelegate";
+			sourceTree = "<group>";
+		};
+		CE81971B2165BD5600522C58 /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				CE0EA0232166853500230873 /* Model */,
+				CE81971D2165BD7100522C58 /* View */,
+				CE81971C2165BD6700522C58 /* Controller */,
+			);
+			path = Searching;
+			sourceTree = "<group>";
+		};
+		CE81971C2165BD6700522C58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE62470321667C550081138E /* CDSearching+SearchDelegate */,
+				CE8197202165BDA300522C58 /* CDSearchingViewController.swift */,
+				CE8197212165BDA300522C58 /* CDSearchingViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE81971D2165BD7100522C58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE81972E2165D05D00522C58 /* Adapter */,
+				CE8197292165CF2B00522C58 /* CollectionViewCell */,
+				CE8197242165BDAD00522C58 /* CDSearchingView.xib */,
+				CE8197262165BDBC00522C58 /* CDSearchingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE8197282165BDE300522C58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE587A5321652B2B0094E290 /* CDMainViewController.xib */,
+				CE9148C7215A033600076D7E /* CDMainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE8197292165CF2B00522C58 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE6246FE21667A020081138E /* SearchTable */,
+				CE8197392166664400522C58 /* Buildings */,
+				CE8197382166663800522C58 /* Facility */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		CE81972E2165D05D00522C58 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				CE81972F2165D08300522C58 /* CDFacilityCollectionViewAdapter.swift */,
+				CE81973E216667F100522C58 /* CDBuildingsCollectionViewAdapter.swift */,
+				CE6246FC216679F80081138E /* CDSearchTableViewAdapter.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		CE8197312166494400522C58 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				CE819732216649AE00522C58 /* CDBuildingCollectionAdpater.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		CE8197382166663800522C58 /* Facility */ = {
+			isa = PBXGroup;
+			children = (
+				CE81972A2165CF5400522C58 /* CDFacilityCollectionViewCell.swift */,
+				CE81972B2165CF5400522C58 /* CDFacilityCollectionViewCell.xib */,
+			);
+			path = Facility;
+			sourceTree = "<group>";
+		};
+		CE8197392166664400522C58 /* Buildings */ = {
+			isa = PBXGroup;
+			children = (
+				CE81973A2166667700522C58 /* CDBuildingsCollectionViewCell.swift */,
+				CE81973B2166667700522C58 /* CDBuildingsCollectionViewCell.xib */,
+			);
+			path = Buildings;
+			sourceTree = "<group>";
+		};
 		CE9148B9215A033600076D7E = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +519,7 @@
 				CE9148C4215A033600076D7E /* CampusDaumMap */,
 				CE9148C3215A033600076D7E /* Products */,
 				CE9148E1215A079200076D7E /* Frameworks */,
+				B70CA1D4A60C806F1E8DC257 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,11 +534,15 @@
 		CE9148C4215A033600076D7E /* CampusDaumMap */ = {
 			isa = PBXGroup;
 			children = (
-				CE9148C7215A033600076D7E /* CDViewController.swift */,
+				CEA1F93E216509FE0040AA4A /* Main */,
+				CE0EA0442166BAE600230873 /* GetParh */,
+				CE9148EF215A41F800076D7E /* Global */,
+				CE587A3E21651E970094E290 /* Waiting */,
+				CE81971B2165BD5600522C58 /* Searching */,
+				CE0EA0262166A4C700230873 /* BuildingDetail */,
 				CE9148DC215A059D00076D7E /* Support */,
 				CE9148DB215A058700076D7E /* Resource */,
 				CE9148DA215A056F00076D7E /* Storyboard */,
-				CE9148CC215A033600076D7E /* CampusDaumMap.xcdatamodeld */,
 			);
 			path = CampusDaumMap;
 			sourceTree = "<group>";
@@ -111,6 +567,7 @@
 		CE9148DC215A059D00076D7E /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				CE0EA0572166D50600230873 /* EAGetuserLoaction */,
 				CE9148C5215A033600076D7E /* CDAppDelegate.swift */,
 				CE9148D4215A033900076D7E /* Info.plist */,
 				CE9148E5215A0B3700076D7E /* CDObjHeader.h */,
@@ -123,8 +580,154 @@
 			isa = PBXGroup;
 			children = (
 				CE9148E2215A079200076D7E /* NMapViewerSDK.framework */,
+				CF5861E8FB6BE8ECD927874C /* Pods_CampusDaumMap.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE9148E8215A36BA00076D7E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE9148EB215A372100076D7E /* CDMainView.swift */,
+				CE9148ED215A372E00076D7E /* CDMainView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE9148EF215A41F800076D7E /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				CE587A4121651F820094E290 /* Parent */,
+				CE587A4C216521610094E290 /* Animation */,
+				CE9148F0215A420100076D7E /* CoreData */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		CE9148F0215A420100076D7E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CE914912215A483100076D7E /* Model */,
+				CE9148F1215A420B00076D7E /* Entities */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CE9148F1215A420B00076D7E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CE81973421665B9200522C58 /* Building+CoreDataClass.swift */,
+				CE81973521665B9200522C58 /* Building+CoreDataProperties.swift */,
+				CEC737FC215E367F00DA7C36 /* Facility+CoreDataClass.swift */,
+				CEC737FD215E367F00DA7C36 /* Facility+CoreDataProperties.swift */,
+				CEC737FE215E367F00DA7C36 /* Layers+CoreDataClass.swift */,
+				CEC737FF215E367F00DA7C36 /* Layers+CoreDataProperties.swift */,
+				CEC737EF215E21BD00DA7C36 /* GPSInfo+CoreDataClass.swift */,
+				CEC737F0215E21BD00DA7C36 /* GPSInfo+CoreDataProperties.swift */,
+				CEC737F1215E21BD00DA7C36 /* Connection+CoreDataClass.swift */,
+				CEC737F2215E21BD00DA7C36 /* Connection+CoreDataProperties.swift */,
+				CE914981215C6E0F00076D7E /* EachLayerFacilities+CoreDataClass.swift */,
+				CE914982215C6E0F00076D7E /* EachLayerFacilities+CoreDataProperties.swift */,
+				CE9148CC215A033600076D7E /* CampusDaumMap.xcdatamodeld */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CE914912215A483100076D7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE914913215A483700076D7E /* TaskModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE914913215A483700076D7E /* TaskModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE914939215B7F8200076D7E /* CoreDataManager */,
+			);
+			path = TaskModel;
+			sourceTree = "<group>";
+		};
+		CE914939215B7F8200076D7E /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				CE91491B215A87B700076D7E /* CDSetInitialCoreData.swift */,
+				CE91493A215B7F8D00076D7E /* ExtensionEntityQuery */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		CE91493A215B7F8D00076D7E /* ExtensionEntityQuery */ = {
+			isa = PBXGroup;
+			children = (
+				CE914914215A485300076D7E /* CDCoreDataManager.swift */,
+				CE914940215B7FE300076D7E /* EachLayerFacilities */,
+				CE91493F215B7FD600076D7E /* Facility */,
+				CE91493E215B7FD000076D7E /* Layers */,
+				CE91493D215B7FAD00076D7E /* Building */,
+				CE91493C215B7FA300076D7E /* Connection */,
+				CE91493B215B7F9900076D7E /* GPSInfo */,
+			);
+			path = ExtensionEntityQuery;
+			sourceTree = "<group>";
+		};
+		CE91493B215B7F9900076D7E /* GPSInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CE914941215B802800076D7E /* CDGPSInfoExtension.swift */,
+			);
+			path = GPSInfo;
+			sourceTree = "<group>";
+		};
+		CE91493C215B7FA300076D7E /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				CE914943215B806900076D7E /* CDConnectionExtension.swift */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		CE91493D215B7FAD00076D7E /* Building */ = {
+			isa = PBXGroup;
+			children = (
+				CE914945215B808E00076D7E /* CDBuildingExtension.swift */,
+			);
+			path = Building;
+			sourceTree = "<group>";
+		};
+		CE91493E215B7FD000076D7E /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				CE91499D215D2CE300076D7E /* CDLayersExtension.swift */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		CE91493F215B7FD600076D7E /* Facility */ = {
+			isa = PBXGroup;
+			children = (
+				CEC737F7215E276D00DA7C36 /* CDFacilityExtension.swift */,
+			);
+			path = Facility;
+			sourceTree = "<group>";
+		};
+		CE914940215B7FE300076D7E /* EachLayerFacilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEC737FA215E2AC700DA7C36 /* CDEachLayerFacilitiesExtension.swift */,
+			);
+			path = EachLayerFacilities;
+			sourceTree = "<group>";
+		};
+		CEA1F93E216509FE0040AA4A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE8197312166494400522C58 /* Adapter */,
+				CE9148E8215A36BA00076D7E /* View */,
+				CE8197282165BDE300522C58 /* Controller */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,11 +737,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE9148D7215A033900076D7E /* Build configuration list for PBXNativeTarget "CampusDaumMap" */;
 			buildPhases = (
+				F0A2C341FBF888412C59AAC3 /* [CP] Check Pods Manifest.lock */,
 				CE9148BE215A033600076D7E /* Sources */,
 				CE9148BF215A033600076D7E /* Frameworks */,
 				CE9148C0215A033600076D7E /* Resources */,
 				CE9148E0215A075D00076D7E /* Embed Frameworks */,
 				CE9148E4215A088300076D7E /* ShellScript */,
+				3D6714EA1CE78BE9CE4E781E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,15 +792,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0EA02B2166A5D500230873 /* CDBuildingDetailViewController.xib in Resources */,
+				CE9148EE215A372E00076D7E /* CDMainView.xib in Resources */,
+				CE587A50216525840094E290 /* loading.json in Resources */,
 				CE9148D3215A033900076D7E /* LaunchScreen.storyboard in Resources */,
 				CE9148D0215A033900076D7E /* Assets.xcassets in Resources */,
+				CE587A5421652B2B0094E290 /* CDMainViewController.xib in Resources */,
+				CE0EA0302166A72B00230873 /* CDBuildingDetailView.xib in Resources */,
+				CE0EA0352166A8D900230873 /* CDBuildingDetailTableViewCell.xib in Resources */,
 				CE9148CB215A033600076D7E /* Main.storyboard in Resources */,
+				CE0EA0762167405800230873 /* CDWaitingViewController.xib in Resources */,
+				CE587A4E216521800094E290 /* loading_circle.json in Resources */,
+				CE62470221667A230081138E /* CDSearchTableViewCell.xib in Resources */,
+				CE0EA03F2166B3AB00230873 /* CDLayerDetailViewController.xib in Resources */,
+				CE0EA0522166BB6200230873 /* CDGetPathViewController.xib in Resources */,
+				CE0EA0562166BB7800230873 /* CDGetPathView.xib in Resources */,
+				CE0EA06921671AFC00230873 /* CDSelectBuildingViewController.xib in Resources */,
+				CE0EA06E21671B1400230873 /* CDSelectBuildingView.xib in Resources */,
+				CE587A492165203F0094E290 /* CDWaitingView.xib in Resources */,
+				CE8197252165BDAD00522C58 /* CDSearchingView.xib in Resources */,
+				CE8197232165BDA300522C58 /* CDSearchingViewController.xib in Resources */,
+				CE81972D2165CF5500522C58 /* CDFacilityCollectionViewCell.xib in Resources */,
+				CE0EA0432166B3D200230873 /* CDLayerDetailView.xib in Resources */,
+				CE81973D2166667700522C58 /* CDBuildingsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3D6714EA1CE78BE9CE4E781E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CampusDaumMap/Pods-CampusDaumMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Fingertips/Fingertips.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fingertips.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CampusDaumMap/Pods-CampusDaumMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CE9148E4215A088300076D7E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +854,24 @@
 			shellPath = /bin/sh;
 			shellScript = "/Users/user/Desktop/maps.ios-master/Scripts/strip-frameworks.sh";
 		};
+		F0A2C341FBF888412C59AAC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CampusDaumMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -216,10 +879,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE587A4321651FB20094E290 /* CDParentNavigationController.swift in Sources */,
+				CE81973F216667F100522C58 /* CDBuildingsCollectionViewAdapter.swift in Sources */,
+				CE81973C2166667700522C58 /* CDBuildingsCollectionViewCell.swift in Sources */,
+				CE914942215B802800076D7E /* CDGPSInfoExtension.swift in Sources */,
 				CE9148E7215A19FD00076D7E /* NMapViewResources.swift in Sources */,
+				CE9148EC215A372100076D7E /* CDMainView.swift in Sources */,
+				CEC737F6215E21BD00DA7C36 /* Connection+CoreDataProperties.swift in Sources */,
+				CE0EA0752167405800230873 /* CDWaitingViewController.swift in Sources */,
+				CE8197272165BDBC00522C58 /* CDSearchingView.swift in Sources */,
+				CE0EA0382166AAE000230873 /* CDBuildingDetailTableViewAdapter.swift in Sources */,
 				CE9148CE215A033600076D7E /* CampusDaumMap.xcdatamodeld in Sources */,
-				CE9148C8215A033600076D7E /* CDViewController.swift in Sources */,
+				CE0EA0412166B3C600230873 /* CDLayerDetailView.swift in Sources */,
+				CE914946215B808E00076D7E /* CDBuildingExtension.swift in Sources */,
+				CE81972C2165CF5400522C58 /* CDFacilityCollectionViewCell.swift in Sources */,
+				CE81973621665B9200522C58 /* Building+CoreDataClass.swift in Sources */,
+				CE81973721665B9200522C58 /* Building+CoreDataProperties.swift in Sources */,
+				CEC73803215E367F00DA7C36 /* Layers+CoreDataProperties.swift in Sources */,
+				CEC737FB215E2AC700DA7C36 /* CDEachLayerFacilitiesExtension.swift in Sources */,
+				CE91499E215D2CE300076D7E /* CDLayersExtension.swift in Sources */,
+				CEC73801215E367F00DA7C36 /* Facility+CoreDataProperties.swift in Sources */,
+				CEC73800215E367F00DA7C36 /* Facility+CoreDataClass.swift in Sources */,
+				CE914944215B806900076D7E /* CDConnectionExtension.swift in Sources */,
+				CEC737F8215E276D00DA7C36 /* CDFacilityExtension.swift in Sources */,
+				CE587A4B216520540094E290 /* CDWaitingView.swift in Sources */,
+				CE91498D215C6E0F00076D7E /* EachLayerFacilities+CoreDataClass.swift in Sources */,
+				CE6246FD216679F80081138E /* CDSearchTableViewAdapter.swift in Sources */,
+				CEC737F4215E21BD00DA7C36 /* GPSInfo+CoreDataProperties.swift in Sources */,
+				CE62470521667C8A0081138E /* CDSearching+SearchDelegate.swift in Sources */,
+				CEC737F5215E21BD00DA7C36 /* Connection+CoreDataClass.swift in Sources */,
+				CE0EA05C2166D56D00230873 /* EAGetUserLocation.m in Sources */,
+				CE0EA0252166854B00230873 /* CDSearchingModel.swift in Sources */,
+				CE0EA0512166BB6200230873 /* CDGetPathViewController.swift in Sources */,
+				CE0EA0342166A8D900230873 /* CDBuildingDetailTableViewCell.swift in Sources */,
+				CEC73802215E367F00DA7C36 /* Layers+CoreDataClass.swift in Sources */,
+				CE62470121667A230081138E /* CDSearchTableViewCell.swift in Sources */,
+				CE819733216649AE00522C58 /* CDBuildingCollectionAdpater.swift in Sources */,
+				CE8197302165D08300522C58 /* CDFacilityCollectionViewAdapter.swift in Sources */,
+				CE0EA0542166BB7100230873 /* CDGetPathView.swift in Sources */,
+				CEC737F3215E21BD00DA7C36 /* GPSInfo+CoreDataClass.swift in Sources */,
+				CE9148C8215A033600076D7E /* CDMainViewController.swift in Sources */,
+				CE0EA06C21671B0C00230873 /* CDSelectBuildingView.swift in Sources */,
+				CE0EA06821671AFC00230873 /* CDSelectBuildingViewController.swift in Sources */,
+				CE0EA02E2166A72100230873 /* CDBuildingDetailView.swift in Sources */,
+				CE91491C215A87B700076D7E /* CDSetInitialCoreData.swift in Sources */,
+				CE0EA03E2166B3AB00230873 /* CDLayerDetailViewController.swift in Sources */,
 				CE9148C6215A033600076D7E /* CDAppDelegate.swift in Sources */,
+				CE0EA0612167003C00230873 /* CDGetShortestPath.swift in Sources */,
+				CE91498E215C6E0F00076D7E /* EachLayerFacilities+CoreDataProperties.swift in Sources */,
+				CE914915215A485300076D7E /* CDCoreDataManager.swift in Sources */,
+				CE0EA02A2166A5D500230873 /* CDBuildingDetailViewController.swift in Sources */,
+				CE8197222165BDA300522C58 /* CDSearchingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +1071,7 @@
 		};
 		CE9148D8215A033900076D7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C50339F3856038F86024A9A7 /* Pods-CampusDaumMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,6 +1100,7 @@
 		};
 		CE9148D9215A033900076D7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C58481E54430F415940C177C /* Pods-CampusDaumMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

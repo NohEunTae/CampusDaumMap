@@ -20,7 +20,7 @@ extension GPSInfo {
     @NSManaged public var latitude: Double
     @NSManaged public var longitude: Double
     @NSManaged public var building: Building?
-    @NSManaged public var nextConnection: NSOrderedSet?
+    @NSManaged public var nextConnection: NSMutableOrderedSet?
 
 }
 
